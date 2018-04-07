@@ -1,7 +1,13 @@
 <h1>One step at a time...</h1>
+<pre> (polyClick)="pClick($event)" </pre>
 
-<agm-map [latitude]="lat" [longitude]="lng">
-		  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-			<agm-polygon [paths]="marker" strokeWeight="3" (polyClick)="pClick($event)" strokeColor="orange" fillOpacity="1"></agm-polygon> 
+<agm-map [latitude]="lat" [longitude]="lng" [usePanning]='true' [mapTypeId]="mapTypeId">
+	  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+							
+    <agm-polygon [paths]="markers"
+      strokeWeight="4"
+      strokeColor="orange"
+      fillOpacity="0"></agm-polygon> 
+
 </agm-map>
 
