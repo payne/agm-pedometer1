@@ -50,6 +50,17 @@ export class AppComponent {
    console.log(e.latLng.lat());
    console.log(e.latLng.lng());
   }
+
+  mClick(e: any) {
+   // TODO: What is the datatype here???
+   console.log(`mClick MGPV4: mClick(${e})`);
+   console.log(e);
+   console.log(typeof e);
+   console.log(e.coords.lat);
+   console.log(e.coords.lng);
+   this.markers.push({lat: e.coords.lat, lng: e.coords.lng, draggable: false, infowindowContent: 'junk'});
+   console.log(this.markers.length);
+  }
 }
 
 
