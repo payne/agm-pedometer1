@@ -10,7 +10,7 @@ import { GoogleMapsAPIWrapper, PolyMouseEvent } from '@agm/core';
 export class AppComponent {
   title = 'app';
   lat = 51.678418;
-  markers: marker[] = [
+  markers: MarkerType[] = [
     {
       lat: 51.673858,
       lng: 7.815982,
@@ -44,14 +44,17 @@ export class AppComponent {
   lng = 7.809007;
   mapTypeId = 'terrain';
 
-  polyClick(e: any) {
-    console.log(e);
+  pClick(e: PolyMouseEvent) {
+   console.log(`MGPV4: pClick(${e})`);
+   console.log(e);
+   console.log(e.latLng.lat());
+   console.log(e.latLng.lng());
   }
 }
 
 
 // just an interface for type safety.
-interface marker {
+interface MarkerType {
   lat: number;
   lng: number;
   label?: string;

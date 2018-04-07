@@ -6,6 +6,7 @@
 							
     <agm-polygon [paths]="markers"
       strokeWeight="4"
+      (polyClick)="pClick($event)" 
       strokeColor="orange"
       fillOpacity="0"></agm-polygon> 
 
