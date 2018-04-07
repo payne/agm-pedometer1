@@ -5,6 +5,7 @@
 	  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 							
     <agm-polygon [paths]="markers"
+			polyDraggable="true"
       strokeWeight="4"
       (polyClick)="pClick($event)" 
       strokeColor="orange"
