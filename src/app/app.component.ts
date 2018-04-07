@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsAPIWrapper, PolyMouseEvent } from '@agm/core';
 
 @Component({
   selector: 'app-root',
